@@ -1,6 +1,7 @@
 import { MongoClient } from "mongodb";
 
-async function insertRecord(){
+//passing parameters to insert function
+async function insertRecord(jsonDocument){
     const uri="mongodb://127.0.0.1:27017";
 
     //open the connection
@@ -10,7 +11,7 @@ async function insertRecord(){
     const library=db.collection("library");
 
    // const res=await library.insertOne({});
-   let jsonDocument={message:"Hello world!",to:"Ashitosh" ,from:"Atish"};
+   //let jsonDocument={message:"Hello world!",to:"Ashitosh" ,from:"Atish"};
 
    await library.insertOne(jsonDocument);
 
@@ -22,7 +23,8 @@ async function insertRecord(){
 }
 
 async function main(){
-    await insertRecord();
+    let jsonDocument={message:"Hello world!",to:"Ashitosh" ,from:"Atish"};
+    await insertRecord(jsonDocument);
 }
 
 main();
