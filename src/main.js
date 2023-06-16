@@ -1,11 +1,11 @@
-import { MongoClient } from "mongodb";
 
-//passing parameters to insert function
+//remotely executable
+//NetWork call
+//Network address
+//Remote Address
+//http://localhost:4000/
+import  express  from "express";
+const app = express()
 
 
-async function main(){
-    let jsonDocument={message:"Hello world!",to:"Ashitosh" ,from:"Atish"};
-    await insertRecord(jsonDocument);
-}
-
-main();
+app.listen(4000);
