@@ -19,4 +19,3 @@ async function insertRecord(jsonDocument){
 
 }
 
-async function read
